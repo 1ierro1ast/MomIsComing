@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/PandazoleHome/Materials.meta
 guid: bb16d48d42ce155489e36895b197a934
+========
+guid: feb2b303cc3d94a4c9b27f9dc9a1e2d3
+>>>>>>>> cd4f38ddcad44dfac03b7cc481ae38fe56a17118:Assets/MomIsComing/Scripts/PlayerController.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

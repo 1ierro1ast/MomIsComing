@@ -33,6 +33,7 @@ namespace MomIsComing.Scripts.PlayerController
         private float _currentRunTime;
         private float _currentCooldown;
         private bool _canRun = true;
+        private bool _canRotate = true;
 
         private float _xRotation = 0f;
 
@@ -43,6 +44,16 @@ namespace MomIsComing.Scripts.PlayerController
         
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+        }
+
+        public void LockRotation()
+        {
+            _canRotate = false;
+        }
+        
+        public void UnlockRotation()
+        {
+            _canRotate = true;
         }
 
         private void Update()
@@ -79,6 +90,8 @@ namespace MomIsComing.Scripts.PlayerController
 
         private void HandleRotation()
         {
+            if(!_canRotate) return;
+            
             float mouseX = Input.GetAxis("Mouse X") * _mouseSensitivity;
             float mouseY = Input.GetAxis("Mouse Y") * _mouseSensitivity;
 

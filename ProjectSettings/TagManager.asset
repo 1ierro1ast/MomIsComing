@@ -34,8 +34,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Player
+  - Interactable
   - Ground
   m_SortingLayers:
   - name: Default

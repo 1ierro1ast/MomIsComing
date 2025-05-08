@@ -547,7 +547,7 @@ MonoBehaviour:
   _walkSpeed: 5
   _runSpeed: 10
   _gravity: -9.81
-  _jumpHeight: 2
+  _jumpHeight: 0.5
   _mouseSensitivity: 2
   _maxRunTime: 5
   _runCooldown: 3
@@ -579,3 +579,4 @@ MonoBehaviour:
     m_Bits: 3221225472
   _parent: {fileID: 7477221025359243830}
   _rotationSpeed: 100
+  _placementOffset: 0.05

@@ -427,6 +427,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_KidsTable
       objectReference: {fileID: 0}
+    - target: {fileID: 2426418452913990843, guid: d1a1800cee8659c4d838a33e6bc8e4d1, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: 3091595897320273409, guid: d1a1800cee8659c4d838a33e6bc8e4d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.8416781
@@ -483,6 +487,10 @@ PrefabInstance:
     - target: {fileID: 5979167654069592403, guid: d1ac8a960c65760428fbca843114e4f9, type: 3}
       propertyPath: m_Name
       value: Prop_Cabinet_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979167654069592403, guid: d1ac8a960c65760428fbca843114e4f9, type: 3}
+      propertyPath: m_Layer
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 6463111737945275369, guid: d1ac8a960c65760428fbca843114e4f9, type: 3}
       propertyPath: m_LocalScale.y
@@ -544,6 +552,10 @@ PrefabInstance:
     - target: {fileID: 8227269121097586294, guid: f0953a97f427a7f46b4a4c6f44cbdc79, type: 3}
       propertyPath: m_Name
       value: Prop_Chair_04 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227269121097586294, guid: f0953a97f427a7f46b4a4c6f44cbdc79, type: 3}
+      propertyPath: m_Layer
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 8747944310130838732, guid: f0953a97f427a7f46b4a4c6f44cbdc79, type: 3}
       propertyPath: m_LocalPosition.x
@@ -848,6 +860,10 @@ PrefabInstance:
     - target: {fileID: 858482311419806434, guid: ce84537aafaf10642b4f78f152d0cb53, type: 3}
       propertyPath: m_Name
       value: Prop_Table_10
+      objectReference: {fileID: 0}
+    - target: {fileID: 858482311419806434, guid: ce84537aafaf10642b4f78f152d0cb53, type: 3}
+      propertyPath: m_Layer
+      value: 31
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1626,6 +1642,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Chair_04 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8227269121097586294, guid: f0953a97f427a7f46b4a4c6f44cbdc79, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: 8747944310130838732, guid: f0953a97f427a7f46b4a4c6f44cbdc79, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.98
@@ -2170,6 +2190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Cabinet_06
       objectReference: {fileID: 0}
+    - target: {fileID: 5939951919464749023, guid: ce7337e3a3bbc634195753b9a2d39f9c, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: 6423578240101174629, guid: ce7337e3a3bbc634195753b9a2d39f9c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3133
@@ -2292,6 +2316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_KidsChair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4634630125094187725, guid: bdd4b959ccae63c4eb04f340d0e91d5f, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: 5411729331441395831, guid: bdd4b959ccae63c4eb04f340d0e91d5f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.1359522
@@ -2397,6 +2425,10 @@ PrefabInstance:
     - target: {fileID: 7182004819003657409, guid: a27ebda50ef194146a054b3b6cebb4ce, type: 3}
       propertyPath: m_Name
       value: Prop_BagChair_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182004819003657409, guid: a27ebda50ef194146a054b3b6cebb4ce, type: 3}
+      propertyPath: m_Layer
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 7557123703812331131, guid: a27ebda50ef194146a054b3b6cebb4ce, type: 3}
       propertyPath: m_LocalScale.x
@@ -2832,6 +2864,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Sofa_02_A
       objectReference: {fileID: 0}
+    - target: {fileID: 4838750147843657927, guid: b14969f5c6066c6449c7cf670dce87a1, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: 5218934419119098493, guid: b14969f5c6066c6449c7cf670dce87a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.768
@@ -3122,6 +3158,10 @@ PrefabInstance:
     - target: {fileID: 8227269121097586294, guid: f0953a97f427a7f46b4a4c6f44cbdc79, type: 3}
       propertyPath: m_Name
       value: Prop_Chair_04 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227269121097586294, guid: f0953a97f427a7f46b4a4c6f44cbdc79, type: 3}
+      propertyPath: m_Layer
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 8747944310130838732, guid: f0953a97f427a7f46b4a4c6f44cbdc79, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3742,6 +3782,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Table_15
       objectReference: {fileID: 0}
+    - target: {fileID: 8108054837608305370, guid: 898fd78874ed4fd4696de421d80e4d8f, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: 8921147377448355936, guid: 898fd78874ed4fd4696de421d80e4d8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.256
@@ -3924,6 +3968,10 @@ PrefabInstance:
     - target: {fileID: 6282063412259024970, guid: 053fef6cc17b11f4485e27a5d11ffafe, type: 3}
       propertyPath: m_Name
       value: Prop_Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282063412259024970, guid: 053fef6cc17b11f4485e27a5d11ffafe, type: 3}
+      propertyPath: m_Layer
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 6657885744878398192, guid: 053fef6cc17b11f4485e27a5d11ffafe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4202,6 +4250,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Chair_02
       objectReference: {fileID: 0}
+    - target: {fileID: 2759727349480034526, guid: b868d9c761bfadd49bbaeaaa7baf8ba1, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: 3244656389259283044, guid: b868d9c761bfadd49bbaeaaa7baf8ba1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.727
@@ -4298,6 +4350,10 @@ PrefabInstance:
     - target: {fileID: 6500236470139838898, guid: 563a7e89fc9ec3c408187be3c600e7fd, type: 3}
       propertyPath: m_Name
       value: Prop_Pouffes_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500236470139838898, guid: 563a7e89fc9ec3c408187be3c600e7fd, type: 3}
+      propertyPath: m_Layer
+      value: 31
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5278,6 +5334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Chair_04
       objectReference: {fileID: 0}
+    - target: {fileID: 8227269121097586294, guid: f0953a97f427a7f46b4a4c6f44cbdc79, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: 8747944310130838732, guid: f0953a97f427a7f46b4a4c6f44cbdc79, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.666
@@ -5334,6 +5394,10 @@ PrefabInstance:
     - target: {fileID: 7405838858727382534, guid: 6d06f861e7132264aa7aa628258e70c9, type: 3}
       propertyPath: m_Name
       value: Prop_Sofa_02_G
+      objectReference: {fileID: 0}
+    - target: {fileID: 7405838858727382534, guid: 6d06f861e7132264aa7aa628258e70c9, type: 3}
+      propertyPath: m_Layer
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 7893969676920325308, guid: 6d06f861e7132264aa7aa628258e70c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5460,6 +5524,10 @@ PrefabInstance:
     - target: {fileID: 4634630125094187725, guid: bdd4b959ccae63c4eb04f340d0e91d5f, type: 3}
       propertyPath: m_Name
       value: Prop_KidsChair
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634630125094187725, guid: bdd4b959ccae63c4eb04f340d0e91d5f, type: 3}
+      propertyPath: m_Layer
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 5411729331441395831, guid: bdd4b959ccae63c4eb04f340d0e91d5f, type: 3}
       propertyPath: m_LocalPosition.x

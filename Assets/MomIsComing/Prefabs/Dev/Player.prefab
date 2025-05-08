@@ -711,8 +711,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c61f4717d174d5bbcb7e6547fcff9b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _walkSpeed: 5
-  _runSpeed: 10
+  _walkSpeed: 3
+  _runSpeed: 6
   _gravity: -9.81
   _jumpHeight: 0.5
   _mouseSensitivity: 2
@@ -746,7 +746,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 3221225472
   _parent: {fileID: 5248893015158596385}
-  _rotationSpeed: 100
+  _rotationSpeed: 200
   _placementOffset: 0.05
   _target: {fileID: 8681515032227993823}
   _rig: {fileID: 1243230527387266420}

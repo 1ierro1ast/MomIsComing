@@ -1,3 +1,9 @@
+Children models asset - https://assetstore.unity.com/packages/3d/characters/humanoids/humans/modular-stylized-character-1-255279
+
+Lowpoly furniture asset - https://assetstore.unity.com/packages/3d/props/interior/pandazole-home-interior-low-poly-pack-203033
+
 Windows - https://sketchfab.com/3d-models/window-frame-0ceb3436b5884703851cab6ed888925f
+
 Curtains - https://sketchfab.com/3d-models/shapespark-low-poly-curtains-kit-41bc96fef75c499fac670d2557401f5a
+
 Door - https://sketchfab.com/3d-models/door-d6b9b84b78ae4462a6cf021b412085fe

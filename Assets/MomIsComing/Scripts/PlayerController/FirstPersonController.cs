@@ -37,7 +37,7 @@ namespace MomIsComing.Scripts.PlayerController
         private bool _canRotate = true;
 
         private float _xRotation = 0f;
-        private static readonly int IsMoving = Animator.StringToHash("IsMoving");
+        private static readonly int IsMoving = Animator.StringToHash("IsWalking");
 
         private void Awake()
         {
@@ -79,7 +79,7 @@ namespace MomIsComing.Scripts.PlayerController
 
             Vector3 move = transform.right * x + transform.forward * z;
             float currentSpeed = Input.GetKey(KeyCode.LeftShift) && _canRun ? _runSpeed : _walkSpeed;
-            _animator.SetBool(IsMoving, currentSpeed > 0f);
+            _animator.SetBool(IsMoving, move.magnitude > 0f);
             _controller.Move(move * currentSpeed * Time.deltaTime);
 
             if (Input.GetButtonDown("Jump") && _isGrounded)

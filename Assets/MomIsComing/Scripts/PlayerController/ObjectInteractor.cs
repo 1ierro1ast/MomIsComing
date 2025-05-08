@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.Animations.Rigging;
+using UnityEngine.Serialization;
 
 namespace MomIsComing.Scripts.PlayerController
 {
@@ -11,6 +14,8 @@ namespace MomIsComing.Scripts.PlayerController
         [SerializeField] private Transform _parent;
         [SerializeField] private float _rotationSpeed = 100f;
         [SerializeField] private float _placementOffset = 0.00f;
+        [SerializeField] private Transform _target;
+        [SerializeField] private Rig _rig;
         
         private bool _isInteractPressed;
         private bool _isRotatingObject;
@@ -18,12 +23,24 @@ namespace MomIsComing.Scripts.PlayerController
         private PlaceableObject _takenObject;
         private RaycastHit _hitPoint;
         private Vector3 _lastValidHitPoint;
+        private float _lerpTarget;
+        private bool _lerpWeight;
 
         private void Update()
         {
             UpdateInteractionRay();
             HandleInput();
             HandleInteraction();
+
+            _rig.weight = Mathf.Lerp(_rig.weight, _lerpTarget, 10 * Time.deltaTime);
+
+            _target.position = _eyes.position + _eyes.forward;
+
+            if (_takenObject != null && !_isRotatingObject)
+            {
+                _takenObject.transform.rotation = transform.rotation * Quaternion.identity;
+            }
+
         }
 
         private void UpdateInteractionRay()
@@ -73,6 +90,7 @@ namespace MomIsComing.Scripts.PlayerController
 
         private void GrabObject()
         {
+            _lerpTarget = 1;
             _takenObject = _availablePlaceableObject;
             _takenObject.transform.SetParent(_parent);
             _takenObject.transform.localPosition = Vector3.zero;
@@ -103,6 +121,7 @@ namespace MomIsComing.Scripts.PlayerController
             
             _takenObject.transform.SetParent(null);
             _takenObject.transform.position = _lastValidHitPoint + Vector3.up * _placementOffset;
+            _takenObject.transform.rotation = Quaternion.identity;
             _isRotatingObject = true;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -116,6 +135,7 @@ namespace MomIsComing.Scripts.PlayerController
 
         private void CompleteObjectPlacement()
         {
+            _lerpTarget = 0;
             _takenObject.transform.position = _lastValidHitPoint + Vector3.up * _placementOffset;
             _takenObject.EnableInteractable();
             _takenObject = null;

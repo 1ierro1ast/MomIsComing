@@ -7,12 +7,12 @@ namespace MomIsComing.Scripts
     {
         [SerializeField] private Rigidbody _rigidbody;
 
-        [SerializeField] private float _maxPositionDistance;
-        [SerializeField] private float _maxAngleDifference;
+        [SerializeField] private float _maxPositionDistance = 5;
+        [SerializeField] private float _maxAngleDifference = 180;
 
         [SerializeField]
         [Tooltip("Вес позиции в сравнении (от 0 до 1)")]
-        [Range(0, 1)] private float _positionWeight;
+        [Range(0, 1)] private float _positionWeight = 0.5f;
 
         private Vector3 _startPosition;
         private Quaternion _startRotation;
@@ -43,7 +43,7 @@ namespace MomIsComing.Scripts
         public void Throw()
         {
             Vector3 direction = Random.insideUnitSphere.normalized;
-            float force = Random.Range(1f, 5f);
+            float force = Random.Range(20f, 30f);
             _rigidbody.AddForce(direction * force, ForceMode.Impulse);
         }
 

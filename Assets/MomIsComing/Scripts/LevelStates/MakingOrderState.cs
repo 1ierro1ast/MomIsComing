@@ -14,7 +14,7 @@ namespace MomIsComing.Scripts.LevelStates
         public MakingOrderState(LevelStateMachine stateMachine)
         {
             _stateMachine = stateMachine;
-            _time = 120;
+            _time = 60;
         }
         public void Exit()
         {

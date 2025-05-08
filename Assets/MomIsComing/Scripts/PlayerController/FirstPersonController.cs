@@ -25,6 +25,7 @@ namespace MomIsComing.Scripts.PlayerController
         [SerializeField] private Transform _groundCheck;
         [SerializeField] private float _groundDistance = 0.4f;
         [SerializeField] private LayerMask _groundMask;
+        [SerializeField] private Animator _animator;
 
         private CharacterController _controller;
         private Vector3 _velocity;
@@ -36,6 +37,7 @@ namespace MomIsComing.Scripts.PlayerController
         private bool _canRotate = true;
 
         private float _xRotation = 0f;
+        private static readonly int IsMoving = Animator.StringToHash("IsMoving");
 
         private void Awake()
         {
@@ -77,6 +79,7 @@ namespace MomIsComing.Scripts.PlayerController
 
             Vector3 move = transform.right * x + transform.forward * z;
             float currentSpeed = Input.GetKey(KeyCode.LeftShift) && _canRun ? _runSpeed : _walkSpeed;
+            _animator.SetBool(IsMoving, currentSpeed > 0f);
             _controller.Move(move * currentSpeed * Time.deltaTime);
 
             if (Input.GetButtonDown("Jump") && _isGrounded)

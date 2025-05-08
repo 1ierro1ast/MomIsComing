@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5786400069661655579}
+  - component: {fileID: 5432283006491588665}
   m_Layer: 0
   m_Name: Window2
   m_TagString: Untagged
@@ -33,6 +34,27 @@ Transform:
   - {fileID: 5267058696382495940}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5432283006491588665
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7620952817677666260}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.23437023, y: 2.6028123, z: 1.8157171}
+  m_Center: {x: -0.032199383, y: -0.04293251, z: 0.05008787}
 --- !u!1001 &4575541867956374814
 PrefabInstance:
   m_ObjectHideFlags: 0

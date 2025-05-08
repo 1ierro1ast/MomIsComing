@@ -4,6 +4,7 @@ namespace MomIsComing.Scripts.PlayerController
 {
     public class PlaceableObject : MonoBehaviour
     {
+        
         public void DisableInteractable()
         {
             gameObject.layer = 0;

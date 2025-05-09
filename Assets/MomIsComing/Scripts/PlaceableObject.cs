@@ -43,7 +43,7 @@ namespace MomIsComing.Scripts
         public void Throw()
         {
             Vector3 direction = Random.insideUnitSphere.normalized;
-            float force = Random.Range(20f, 30f);
+            float force = Random.Range(10f, 20f);
             _rigidbody.AddForce(direction * force, ForceMode.Impulse);
         }
 

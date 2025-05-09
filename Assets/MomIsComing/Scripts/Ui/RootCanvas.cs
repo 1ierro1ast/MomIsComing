@@ -1,3 +1,5 @@
+using System;
+using MomIsComing.Scripts.Ui.Popups;
 using UnityEngine;
 
 namespace MomIsComing.Scripts.Ui
@@ -19,12 +21,30 @@ namespace MomIsComing.Scripts.Ui
             }
         }
         
-        /*[SerializeField] private DebugPopup _debugPopup;
-        [SerializeField] private MenuPopup _menuPopup;*/
+        [SerializeField] private MenuPopup _menuPopup;
+        [SerializeField] private TimerPopup _timerPopup;
+        [SerializeField] private WinPopup _winPopup;
+        [SerializeField] private LosePopup _losePopup;
         
-        
-        /*public DebugPopup DebugPopup => _debugPopup;
-        public MenuPopup MenuPopup => _menuPopup;*/
-        
+        public MenuPopup MenuPopup => _menuPopup;
+
+        public TimerPopup TimerPopup => _timerPopup;
+
+        public WinPopup WinPopup => _winPopup;
+
+        public LosePopup LosePopup => _losePopup;
+
+        private void Awake()
+        {
+            if (_instance == null)
+            {
+                _instance = this;
+                DontDestroyOnLoad(_instance);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

@@ -39,6 +39,7 @@ namespace MomIsComing.Scripts.Ui
             _canvasGroup.gameObject.SetActive(true);
             _canvasGroup.alpha = 1;
             _isActive = true;
+            OnShownCallback();
         }
         public void HideInstantly()
         {
@@ -50,6 +51,7 @@ namespace MomIsComing.Scripts.Ui
             _canvasGroup.gameObject.SetActive(false);
             _canvasGroup.alpha = 0;
             _isActive = false;
+            OnHideCallback();
         }
 
         public void Show(Action onShown = null)

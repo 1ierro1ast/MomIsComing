@@ -19,6 +19,13 @@ namespace MomIsComing.Scripts.UsefulExtensions.Runtime
             }
             return number.ToString();
         }
+        
+        public static string FormatTime(this float number)
+        {
+            int minutes = Mathf.FloorToInt(number / 60f);
+            int seconds = Mathf.FloorToInt(number % 60f);
+            return $"{minutes:00}:{seconds:00}";
+        }
 
         private static readonly SortedDictionary<int, string> Abbrevations = new()
         {

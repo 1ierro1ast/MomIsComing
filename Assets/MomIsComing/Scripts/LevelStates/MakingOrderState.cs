@@ -13,14 +13,15 @@ namespace MomIsComing.Scripts.LevelStates
         private readonly float _time;
         private float _timer;
         private bool _isTimerStarted;
-        private string _label = "Mom is coming in {0}";
+        private string _label;
 
         private Action<float,float> _updatedCallback;
 
-        public MakingOrderState(LevelStateMachine stateMachine)
+        public MakingOrderState(LevelStateMachine stateMachine, GameConfig gameConfig, float waitingMomTime)
         {
             _stateMachine = stateMachine;
-            _time = 60;
+            _time = waitingMomTime;
+            _label = gameConfig.WaitingMomLabel;
         }
         
         public void Exit()

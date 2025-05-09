@@ -45,3 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectsKeeper: {fileID: 0}
+  _levelConfig:
+    WaitingFriendsTime: 20
+    WaitingMomTime: 30

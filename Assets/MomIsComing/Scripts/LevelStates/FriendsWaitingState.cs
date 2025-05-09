@@ -13,13 +13,15 @@ namespace MomIsComing.Scripts.LevelStates
         private readonly float _time;
         private float _timer; 
         private bool _isTimerStarted;
-        private string _label = "Friends are coming in {0}";
+        private string _label;
         private Action<float,float> _updatedCallback;
 
-        public FriendsWaitingState(LevelStateMachine stateMachine)
+        public FriendsWaitingState(LevelStateMachine stateMachine, GameConfig gameConfig,
+            float waitingFriendsTime)
         {
             _stateMachine = stateMachine;
-            _time = 20;
+            _time = waitingFriendsTime;
+            _label = gameConfig.WaitingFriendsLabel;
         }
         public void Exit()
         {

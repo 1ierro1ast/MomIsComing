@@ -1,5 +1,6 @@
 ﻿using MomIsComing.Scripts.EasyDebugger.Runtime;
 using MomIsComing.Scripts.EasyStateMachine;
+using MomIsComing.Scripts.Ui;
 
 namespace MomIsComing.Scripts.LevelStates
 {
@@ -29,6 +30,14 @@ namespace MomIsComing.Scripts.LevelStates
             string result = evaluationResult >= 0.85f ? "WIN" : "LOSE";
             Debugger.Message($"Level finished! You are {result}! EvaluationResult: {evaluationResult}");
             Debugger.Message($"Restart game manually please :)");
+            if (evaluationResult >= 0.85f)
+            {
+                RootCanvas.Instance.WinPopup.Show();
+            }
+            else
+            {
+                RootCanvas.Instance.LosePopup.Show();
+            }
         }
     }
 }

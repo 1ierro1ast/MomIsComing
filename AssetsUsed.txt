@@ -7,3 +7,13 @@ Windows - https://sketchfab.com/3d-models/window-frame-0ceb3436b5884703851cab6ed
 Curtains - https://sketchfab.com/3d-models/shapespark-low-poly-curtains-kit-41bc96fef75c499fac670d2557401f5a
 
 Door - https://sketchfab.com/3d-models/door-d6b9b84b78ae4462a6cf021b412085fe
+
+VFX - https://assetstore.unity.com/packages/vfx/particles/cartoon-fx-remaster-free-109565
+
+also VFX - https://assetstore.unity.com/packages/vfx/particles/hyper-casual-fx-200333
+
+Cartoon GUI Pack - https://assetstore.unity.com/packages/2d/gui/cartoon-gui-pack-48850
+
+Dreamteck Splines - https://assetstore.unity.com/packages/tools/utilities/dreamteck-splines-61926
+
+Lowpoly cartoon house interiors - https://assetstore.unity.com/packages/3d/props/interior/low-poly-cartoon-house-interiors-167425

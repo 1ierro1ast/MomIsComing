@@ -1,5 +1,6 @@
 ﻿using MomIsComing.Scripts.EasyDebugger.Runtime;
 using MomIsComing.Scripts.EasyStateMachine;
+using UnityEngine;
 
 namespace MomIsComing.Scripts.LevelStates
 {
@@ -7,6 +8,8 @@ namespace MomIsComing.Scripts.LevelStates
     {
         private LevelStateMachine _stateMachine;
         private ObjectsKeeper _objectsKeeper;
+        private float _timer;
+        private bool _waitingCutscene;
 
         public FriendsCutsceneState(LevelStateMachine stateMachine, ObjectsKeeper objectsKeeper)
         {
@@ -20,13 +23,22 @@ namespace MomIsComing.Scripts.LevelStates
 
         public void Update()
         {
+            if(_waitingCutscene)
+            {
+                _timer += Time.deltaTime;
+                if (_timer >= 2)
+                {
+                    _waitingCutscene = false;
+                    _stateMachine.Enter<MakingOrderState>();
+                }
+            }
         }
 
         public void Enter()
         {
             Debugger.Message(nameof(FriendsCutsceneState));
             _objectsKeeper.ThrowObjects();
-            _stateMachine.Enter<MakingOrderState>();
+            _waitingCutscene = true;
         }
     }
 }

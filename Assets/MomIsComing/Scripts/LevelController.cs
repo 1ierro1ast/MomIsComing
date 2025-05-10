@@ -1,5 +1,5 @@
-﻿using MomIsComing.Scripts.LevelStates;
-using MomIsComing.Scripts.Ui;
+﻿using System;
+using MomIsComing.Scripts.LevelStates;
 using UnityEngine;
 
 namespace MomIsComing.Scripts
@@ -7,12 +7,16 @@ namespace MomIsComing.Scripts
     public class LevelController : MonoBehaviour
     {
         [SerializeField] private ObjectsKeeper _objectsKeeper;
+        [SerializeField] private LevelConfig _levelConfig;
+        
         
         private LevelStateMachine _levelStateMachine;
 
         private void Awake()
         {
-            _levelStateMachine = new LevelStateMachine(_objectsKeeper);
+            var gameConfig = Resources.Load<GameConfig>("GameConfig");
+
+            _levelStateMachine = new LevelStateMachine(_objectsKeeper, gameConfig, _levelConfig);
             
             _levelStateMachine.Enter<FriendsWaitingState>();
         }
@@ -20,6 +24,19 @@ namespace MomIsComing.Scripts
         private void Update()
         {
             _levelStateMachine.Update();
+        }
+    }
+
+    [Serializable]
+    public struct LevelConfig
+    {
+        public float WaitingFriendsTime;
+        public float WaitingMomTime;
+
+        public LevelConfig(float waitingFriendsTime = 20, float waitingMomTime = 30)
+        {
+            WaitingFriendsTime = waitingFriendsTime;
+            WaitingMomTime = waitingMomTime;
         }
     }
 }

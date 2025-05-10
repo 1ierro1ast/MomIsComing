@@ -1,16 +1,15 @@
 ﻿using MomIsComing.Scripts.EasyStateMachine;
 using MomIsComing.Scripts.LevelStates;
-using MomIsComing.Scripts.Ui;
 
 namespace MomIsComing.Scripts
 {
     public class LevelStateMachine : BaseStateMachine
     {
-        public LevelStateMachine(ObjectsKeeper objectsKeeper)
+        public LevelStateMachine(ObjectsKeeper objectsKeeper, GameConfig gameConfig, LevelConfig levelConfig)
         {
-            RegisterState(new FriendsWaitingState(this));
+            RegisterState(new FriendsWaitingState(this, gameConfig, levelConfig.WaitingFriendsTime));
             RegisterState(new FriendsCutsceneState(this, objectsKeeper));
-            RegisterState(new MakingOrderState(this));
+            RegisterState(new MakingOrderState(this, gameConfig, levelConfig.WaitingMomTime));
             RegisterState(new MomState(this, objectsKeeper));
         }
     }

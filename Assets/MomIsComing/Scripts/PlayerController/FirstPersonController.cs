@@ -46,6 +46,10 @@ namespace MomIsComing.Scripts.PlayerController
         
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+
+            var gameConfig = Resources.Load<GameConfig>("GameConfig");
+            _walkSpeed = gameConfig.PlayerWalkSpeed;
+            _runSpeed = gameConfig.PlayerRunSpeed;
         }
 
         public void LockRotation()

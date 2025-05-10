@@ -10,15 +10,19 @@ namespace MomIsComing.Scripts.LevelStates
         private ObjectsKeeper _objectsKeeper;
         private float _timer;
         private bool _waitingCutscene;
+        private PartyStarter _partyStarter;
 
-        public FriendsCutsceneState(LevelStateMachine stateMachine, ObjectsKeeper objectsKeeper)
+        public FriendsCutsceneState(LevelStateMachine stateMachine, ObjectsKeeper objectsKeeper,
+            PartyStarter partyStarter)
         {
+            _partyStarter = partyStarter;
             _objectsKeeper = objectsKeeper;
             _stateMachine = stateMachine;
         }
 
         public void Exit()
         {
+            _partyStarter.StopCutscene();
         }
 
         public void Update()
@@ -26,7 +30,7 @@ namespace MomIsComing.Scripts.LevelStates
             if(_waitingCutscene)
             {
                 _timer += Time.deltaTime;
-                if (_timer >= 2)
+                if (_timer >= _partyStarter.CutsceneLength)
                 {
                     _waitingCutscene = false;
                     _stateMachine.Enter<MakingOrderState>();
@@ -37,6 +41,7 @@ namespace MomIsComing.Scripts.LevelStates
         public void Enter()
         {
             Debugger.Message(nameof(FriendsCutsceneState));
+            _partyStarter.StartCutscene();
             _objectsKeeper.ThrowObjects();
             _waitingCutscene = true;
         }

@@ -15,6 +15,11 @@ MonoBehaviour:
   _enableDebugMessage: 1
   _showMessagesInBuild: 0
   _frameStamp: 0
-  _textColors:
-  - Text: 
-    Color: {r: 1, g: 0, b: 0, a: 1}
+  _timeStamp: 0
+  _deviceCurrentTimeStamp: 0
+  _durationInfoColor: {r: 1, g: 1, b: 1, a: 1}
+  _baseMessageColor: {r: 0.4745098, g: 0.94509804, b: 1, a: 1}
+  _contextFilters:
+  - ContextPath: 
+    Color: {r: 0.4745098, g: 0.94509804, b: 1, a: 1}
+    Show: 1

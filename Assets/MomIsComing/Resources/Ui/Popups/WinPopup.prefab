@@ -637,5 +637,5 @@ MonoBehaviour:
   _canvasGroup: {fileID: 3883833737948406625}
   _closeButton: {fileID: 0}
   _openOnAwake: 0
-  _focusOnUi: 0
+  _focusOnUi: 1
   _nextButton: {fileID: 7927844581650859391}

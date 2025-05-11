@@ -38,9 +38,13 @@ namespace MomIsComing.Scripts.PlayerController
 
         private float _xRotation = 0f;
         private static readonly int IsMoving = Animator.StringToHash("IsWalking");
+        public static FirstPersonController Instance;
+        private bool _lockControl;
 
         private void Awake()
         {
+            Instance = this;
+            
             _controller = GetComponent<CharacterController>();
             _currentRunTime = _maxRunTime;
         
@@ -64,6 +68,8 @@ namespace MomIsComing.Scripts.PlayerController
 
         private void Update()
         {
+            if(_lockControl) return;
+            
             HandleMovement();
             HandleRotation();
             HandleRunning();
@@ -148,6 +154,20 @@ namespace MomIsComing.Scripts.PlayerController
         public bool CanRun()
         {
             return _canRun;
+        }
+
+        public void LockControl()
+        {
+            _lockControl = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
+        public void UnlockControl()
+        {
+            _lockControl = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 }

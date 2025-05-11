@@ -9,6 +9,8 @@ namespace MomIsComing.Scripts
         [SerializeField] private ObjectsKeeper _objectsKeeper;
         [SerializeField] private LevelConfig _levelConfig;
         [SerializeField] private PartyStarter _partyStarter;
+        [SerializeField] private MomCutscene _momCutscene;
+        
         
         
         private LevelStateMachine _levelStateMachine;
@@ -17,7 +19,7 @@ namespace MomIsComing.Scripts
         {
             var gameConfig = Resources.Load<GameConfig>("GameConfig");
 
-            _levelStateMachine = new LevelStateMachine(_objectsKeeper, gameConfig, _levelConfig, _partyStarter);
+            _levelStateMachine = new LevelStateMachine(_objectsKeeper, gameConfig, _levelConfig, _partyStarter, _momCutscene);
             
             _levelStateMachine.Enter<FriendsWaitingState>();
         }

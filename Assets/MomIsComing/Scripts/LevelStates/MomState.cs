@@ -8,9 +8,12 @@ namespace MomIsComing.Scripts.LevelStates
     {
         private LevelStateMachine _stateMachine;
         private ObjectsKeeper _objectsKeeper;
+        private MomCutscene _momCutscene;
+
 
         public MomState(LevelStateMachine stateMachine, ObjectsKeeper objectsKeeper, MomCutscene momCutscene)
         {
+            _momCutscene = momCutscene;
             _objectsKeeper = objectsKeeper;
             _stateMachine = stateMachine;
         }
@@ -32,21 +35,9 @@ namespace MomIsComing.Scripts.LevelStates
             Debugger.Message($"Restart game manually please :)");
             
             //Todo:запускаем мамку
-            //MomCutscene.MomEnter(evaluationResult);
+            _momCutscene.MomEnter(evaluationResult);
             //катсцена мамки
             
-            if (evaluationResult >= 0.85f)
-            {
-                //MomCutscene.MomGoHappy();
-                //катсцена глаженья
-                RootCanvas.Instance.WinPopup.Show();
-            }
-            else
-            {
-                //MomCutscene.MomGoAngry();
-                //катсцена шлепанья
-                RootCanvas.Instance.LosePopup.Show();
-            }
         }
     }
 }

@@ -19,3 +19,5 @@ Dreamteck Splines - https://assetstore.unity.com/packages/tools/utilities/dreamt
 Lowpoly cartoon house interiors - https://assetstore.unity.com/packages/3d/props/interior/low-poly-cartoon-house-interiors-167425
 
 Mother - https://sketchfab.com/3d-models/woman-1-b8cee6eefd4c43a1996ffff61ce6dd08
+
+Broom besom - https://sketchfab.com/3d-models/prop-broom-d59525fcbb874b368292121edf53c633

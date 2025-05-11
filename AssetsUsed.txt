@@ -17,3 +17,5 @@ Cartoon GUI Pack - https://assetstore.unity.com/packages/2d/gui/cartoon-gui-pack
 Dreamteck Splines - https://assetstore.unity.com/packages/tools/utilities/dreamteck-splines-61926
 
 Lowpoly cartoon house interiors - https://assetstore.unity.com/packages/3d/props/interior/low-poly-cartoon-house-interiors-167425
+
+Mother - https://sketchfab.com/3d-models/woman-1-b8cee6eefd4c43a1996ffff61ce6dd08

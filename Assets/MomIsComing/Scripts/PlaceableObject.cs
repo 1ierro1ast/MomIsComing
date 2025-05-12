@@ -14,6 +14,9 @@ namespace MomIsComing.Scripts
         [Tooltip("Вес позиции в сравнении (от 0 до 1)")]
         [Range(0, 1)] private float _positionWeight = 0.5f;
 
+        [SerializeField, Tooltip("Объект эффекта, должен быть родительским")] private GameObject _fxGameObject;
+        
+
         private Vector3 _startPosition;
         private Quaternion _startRotation;
 
@@ -58,6 +61,20 @@ namespace MomIsComing.Scripts
         {
             gameObject.layer = 30;
             _rigidbody.isKinematic = false;
+            HidePickupFX();
+        }
+
+        public void ShowPickupFX()
+        {
+            if(_fxGameObject == null) return;
+            _fxGameObject.SetActive(true);   
+        }
+        
+        public void HidePickupFX()
+        {
+            if(_fxGameObject == null) return;
+
+            _fxGameObject.SetActive(false);   
         }
     }
 }

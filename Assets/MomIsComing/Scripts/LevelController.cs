@@ -11,8 +11,6 @@ namespace MomIsComing.Scripts
         [SerializeField] private PartyStarter _partyStarter;
         [SerializeField] private MomCutscene _momCutscene;
         
-        
-        
         private LevelStateMachine _levelStateMachine;
 
         private void Awake()

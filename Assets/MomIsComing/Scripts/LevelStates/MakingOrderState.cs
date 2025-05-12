@@ -16,9 +16,11 @@ namespace MomIsComing.Scripts.LevelStates
         private string _label;
 
         private Action<float,float> _updatedCallback;
+        private ObjectsKeeper _objectsKeeper;
 
-        public MakingOrderState(LevelStateMachine stateMachine, GameConfig gameConfig, float waitingMomTime)
+        public MakingOrderState(LevelStateMachine stateMachine, GameConfig gameConfig, float waitingMomTime, ObjectsKeeper objectsKeeper)
         {
+            _objectsKeeper = objectsKeeper;
             _stateMachine = stateMachine;
             _time = waitingMomTime;
             _label = gameConfig.WaitingMomLabel;
@@ -55,6 +57,8 @@ namespace MomIsComing.Scripts.LevelStates
         {
             Debugger.Message(nameof(MakingOrderState));
             _isTimerStarted = true;
+            
+            _objectsKeeper.ShowPickupFX();
             
             var timerPopup = RootCanvas.Instance.TimerPopup;
             timerPopup.Construct(this, _label);

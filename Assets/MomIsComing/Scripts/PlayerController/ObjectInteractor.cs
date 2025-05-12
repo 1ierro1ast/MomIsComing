@@ -1,4 +1,5 @@
 ﻿using System;
+using MomIsComing.Scripts.Ui;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 
@@ -38,6 +39,15 @@ namespace MomIsComing.Scripts.PlayerController
             if (_takenObject != null && !_isRotatingObject)
             {
                 _takenObject.transform.rotation = transform.rotation * Quaternion.identity;
+            }
+
+            if (_availablePlaceableObject == null)
+            {
+                PickupHint.Instance.HideHint();
+            }
+            else
+            {
+                PickupHint.Instance.ShowHint();
             }
 
         }

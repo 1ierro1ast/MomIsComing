@@ -38,7 +38,8 @@ namespace MomIsComing.Scripts.Ui.Popups
         {
             Debugger.Message("Play button clicked");
             Hide();
-            _sceneLoader.LoadScene("LivingRoom");
+            var levelLoader = LevelLoader.Instance;
+            _sceneLoader.LoadScene(levelLoader.GetCurrentScene());
         }
     }
 }

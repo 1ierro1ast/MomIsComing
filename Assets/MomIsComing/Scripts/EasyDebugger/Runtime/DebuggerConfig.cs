@@ -9,20 +9,35 @@ namespace MomIsComing.Scripts.EasyDebugger.Runtime
         [SerializeField] private bool _enableDebugMessage = true;
         [SerializeField] private bool _showMessagesInBuild = false;
         [SerializeField] private bool _frameStamp;
-        [SerializeField] private TextColor[] _textColors;
+        [SerializeField] private bool _timeStamp;
+        [SerializeField] private bool _deviceCurrentTimeStamp;
+        [SerializeField] private Color _durationInfoColor;
+        [Space] 
+        [SerializeField] private Color _baseMessageColor;
+
+        public Color BaseMessageColor => _baseMessageColor;
+
+        [SerializeField] private ContextFilter[] _contextFilters;
         
         public bool EnableDebugMessage => _enableDebugMessage;
         public bool ShowMessagesInBuild => _showMessagesInBuild;
 
         public bool FrameStamp => _frameStamp;
 
-        public TextColor[] TextColors => _textColors;
+        public bool TimeStamp => _timeStamp;
+
+        public bool DeviceCurrentTimeStamp => _deviceCurrentTimeStamp;
+
+        public Color DurationInfoColor => _durationInfoColor;
+
+        public ContextFilter[] ContextFilters => _contextFilters;
     }
     
     [Serializable]
-    public class TextColor
+    public class ContextFilter
     {
-        public string Text;
+        public string ContextPath;
         public Color Color;
+        public bool Show = true;
     }
 }

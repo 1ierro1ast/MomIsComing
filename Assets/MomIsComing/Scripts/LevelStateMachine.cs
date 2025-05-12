@@ -10,7 +10,7 @@ namespace MomIsComing.Scripts
         {
             RegisterState(new FriendsWaitingState(this, gameConfig, levelConfig.WaitingFriendsTime));
             RegisterState(new FriendsCutsceneState(this, objectsKeeper, partyStarter));
-            RegisterState(new MakingOrderState(this, gameConfig, levelConfig.WaitingMomTime));
+            RegisterState(new MakingOrderState(this, gameConfig, levelConfig.WaitingMomTime, objectsKeeper));
             RegisterState(new MomState(this, objectsKeeper, momCutscene));
         }
     }

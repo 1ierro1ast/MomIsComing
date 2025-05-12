@@ -1,5 +1,6 @@
 ﻿using System;
 using DG.Tweening;
+using MomIsComing.Scripts.PlayerController;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -98,14 +99,20 @@ namespace MomIsComing.Scripts.Ui
         
         protected void FocusOnUi()
         {
-            /*if(!EasyContext.Instance.IsInitialized) return;
+            if(FirstPersonController.Instance != null)
+                FirstPersonController.Instance.LockControl();
             
+            /*if(!EasyContext.Instance.IsInitialized) return;
+
             EasyContext.Instance.Get<Player>().LockControl();
             EasyContext.Instance.Get<InterfaceService>().EnableCursor();*/
         }
         
         protected void FocusOnGameplay()
         {
+            if(FirstPersonController.Instance != null)
+                FirstPersonController.Instance.UnlockControl();
+
             /*if(!EasyContext.Instance.IsInitialized) return;
             
             EasyContext.Instance.Get<Player>().UnlockControl();

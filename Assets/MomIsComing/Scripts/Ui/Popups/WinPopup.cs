@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using MomIsComing.Scripts.StoredData.Runtime;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace MomIsComing.Scripts.Ui.Popups
@@ -16,6 +17,11 @@ namespace MomIsComing.Scripts.Ui.Popups
         private void OnNextButton()
         {
             Hide();
+            //todo сделать нормально перематывание уровня
+            
+            var currentLevel = new StoredInt("CurrentLevel", 0);
+            currentLevel.Value++;
+            
             var sceneLoader = new SceneLoader(this);
             sceneLoader.LoadScene("MenuScene");
         }

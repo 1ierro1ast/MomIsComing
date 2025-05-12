@@ -46,5 +46,13 @@ namespace MomIsComing.Scripts
                 yield return new WaitForSeconds(_throwingCooldown);
             }
         }
+
+        public void ShowPickupFX()
+        {
+            foreach (var placeableObject in _placeableObjects)
+            {
+                placeableObject.ShowPickupFX();
+            }
+        }
     }
 }

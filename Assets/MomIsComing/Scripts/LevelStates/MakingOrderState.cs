@@ -57,7 +57,7 @@ namespace MomIsComing.Scripts.LevelStates
         {
             Debugger.Message(nameof(MakingOrderState));
             _isTimerStarted = true;
-            
+            _objectsKeeper.UnlockItems();
             _objectsKeeper.ShowPickupFX();
             
             var timerPopup = RootCanvas.Instance.TimerPopup;

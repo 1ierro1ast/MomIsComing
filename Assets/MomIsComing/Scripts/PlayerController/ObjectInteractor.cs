@@ -41,13 +41,13 @@ namespace MomIsComing.Scripts.PlayerController
                 _takenObject.transform.rotation = transform.rotation * Quaternion.identity;
             }
 
-            if (_availablePlaceableObject == null)
+            if (_availablePlaceableObject != null && !_availablePlaceableObject.IsLocked)
             {
-                PickupHint.Instance.HideHint();
+                Hints.Instance.ShowPickupHint();
             }
             else
             {
-                PickupHint.Instance.ShowHint();
+                Hints.Instance.HidePickupHint();
             }
 
         }
@@ -59,10 +59,21 @@ namespace MomIsComing.Scripts.PlayerController
                 Debug.DrawRay(_eyes.position, _eyes.forward * _takeDistance, Color.green);
                 if(!_isRotatingObject) _lastValidHitPoint = _hitPoint.point;
                 TryInteractWith(_hitPoint.transform);
+                
+                float dot = Vector3.Dot(_hitPoint.normal.normalized, Vector3.up);
+                
+                if (_takenObject != null && dot > 0.99f) 
+                {
+                    Hints.Instance.ShowPlaceHint();
+                }
             }
             else
             {
                 Debug.DrawRay(_eyes.position, _eyes.forward * _takeDistance, Color.red);
+                
+                
+                Hints.Instance.HidePlaceHint();
+                
             }
         }
 
@@ -87,7 +98,7 @@ namespace MomIsComing.Scripts.PlayerController
         {
             if (!_isInteractPressed) return;
 
-            if (_availablePlaceableObject != null && _takenObject == null)
+            if (_availablePlaceableObject != null && _takenObject == null && !_availablePlaceableObject.IsLocked)
             {
                 GrabObject();
             }

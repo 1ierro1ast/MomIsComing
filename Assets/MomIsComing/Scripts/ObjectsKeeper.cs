@@ -53,6 +53,22 @@ namespace MomIsComing.Scripts
             {
                 placeableObject.ShowPickupFX();
             }
+        }       
+
+        public void LockItems()
+        {
+            foreach (var placeableObject in _placeableObjects)
+            {
+                placeableObject.LockItem();
+            }
+        }
+        
+        public void UnlockItems()
+        {
+            foreach (var placeableObject in _placeableObjects)
+            {
+                placeableObject.UnlockItem();
+            }
         }
     }
 }

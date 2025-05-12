@@ -8,7 +8,7 @@ namespace MomIsComing.Scripts
         public LevelStateMachine(ObjectsKeeper objectsKeeper, GameConfig gameConfig, LevelConfig levelConfig,
             PartyStarter partyStarter, MomCutscene momCutscene)
         {
-            RegisterState(new FriendsWaitingState(this, gameConfig, levelConfig.WaitingFriendsTime));
+            RegisterState(new FriendsWaitingState(this, gameConfig, levelConfig.WaitingFriendsTime, objectsKeeper));
             RegisterState(new FriendsCutsceneState(this, objectsKeeper, partyStarter));
             RegisterState(new MakingOrderState(this, gameConfig, levelConfig.WaitingMomTime, objectsKeeper));
             RegisterState(new MomState(this, objectsKeeper, momCutscene));

@@ -14,11 +14,19 @@ namespace MomIsComing.Scripts
         [Tooltip("Вес позиции в сравнении (от 0 до 1)")]
         [Range(0, 1)] private float _positionWeight = 0.5f;
 
-        [SerializeField, Tooltip("Объект эффекта, должен быть родительским")] private GameObject _fxGameObject;
-        
+        [Space]
+        [SerializeField] 
+        [Tooltip("Объект эффекта, должен быть родительским")] private GameObject _fxGameObject;
 
+        [SerializeField] private Material _rimMaterial;
+        [SerializeField] private MeshRenderer _meshRenderer;
+        
         private Vector3 _startPosition;
         private Quaternion _startRotation;
+        private Material _originalMaterial;
+        private bool _isLocked;
+
+        public bool IsLocked => _isLocked;
 
         private void Awake()
         {
@@ -64,14 +72,35 @@ namespace MomIsComing.Scripts
             HidePickupFX();
         }
 
+        public void LockItem()
+        {
+            _isLocked = true;
+        }
+        
+        public void UnlockItem()
+        {
+            _isLocked = false;
+        }
+
         public void ShowPickupFX()
         {
+            if (_meshRenderer != null && _rimMaterial != null)
+            {
+                _originalMaterial = _meshRenderer.material;
+                _meshRenderer.material = _rimMaterial;
+            }
+
             if(_fxGameObject == null) return;
-            _fxGameObject.SetActive(true);   
+            _fxGameObject.SetActive(true);
         }
         
         public void HidePickupFX()
         {
+            if (_meshRenderer != null && _rimMaterial != null)
+            {
+                _meshRenderer.material = _originalMaterial;
+            }
+            
             if(_fxGameObject == null) return;
 
             _fxGameObject.SetActive(false);   

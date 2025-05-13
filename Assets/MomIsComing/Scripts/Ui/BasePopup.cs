@@ -39,6 +39,8 @@ namespace MomIsComing.Scripts.Ui
             
             _canvasGroup.gameObject.SetActive(true);
             _canvasGroup.alpha = 1;
+            _canvasGroup.interactable = true;
+            _canvasGroup.blocksRaycasts = true;
             _isActive = true;
             OnShownCallback();
         }
@@ -51,6 +53,8 @@ namespace MomIsComing.Scripts.Ui
             
             _canvasGroup.gameObject.SetActive(false);
             _canvasGroup.alpha = 0;
+            _canvasGroup.interactable = false;
+            _canvasGroup.blocksRaycasts = false;
             _isActive = false;
             OnHideCallback();
         }

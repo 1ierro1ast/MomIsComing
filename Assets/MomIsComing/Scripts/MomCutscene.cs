@@ -1,4 +1,6 @@
 using System;
+using DG.Tweening;
+using MomIsComing.Scripts.Ui;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.Playables;
@@ -16,11 +18,9 @@ namespace MomIsComing.Scripts
         [SerializeField] private GameObject _goodFamily;
         [SerializeField] private GameObject _mainCamera;
         [SerializeField] private GameObject _finalCamera;
-        [SerializeField] private GameObject _screenFader;
-        
-        
+        [SerializeField] private Image _screenFader;
+        [SerializeField] private float _delay = 1;
 
-        
 
         public void MomEnter(float evaluationResult)
         {
@@ -36,22 +36,38 @@ namespace MomIsComing.Scripts
 
         public void MomGoAngry()
         {
+            Cursor.lockState = CursorLockMode.None;
+
             _finalCamera.SetActive(true);
-            _screenFader.SetActive(true);
-            _screenFader.GetComponent<Image>().CrossFadeAlpha(0, 30, true);
+            _screenFader.gameObject.SetActive(true);
+            _screenFader.CrossFadeAlpha(0, 1, true);
             _mainCamera.SetActive(false);
             _badFamily.SetActive(true);
+            _goodFamily.SetActive(false);
+
+            DOVirtual.DelayedCall(_delay, () =>
+            {
+                RootCanvas.Instance.LosePopup.Show();
+                Cursor.visible = true;
+            });
         }
 
         public void MomGoHappy()
         {
+            Cursor.lockState = CursorLockMode.None;
+
             _finalCamera.SetActive(true);
-            _screenFader.SetActive(true);
-            _screenFader.GetComponent<Image>().CrossFadeAlpha(0, 30, true);
+            _screenFader.gameObject.SetActive(true);
+            _screenFader.CrossFadeAlpha(0, 1, true);
             _mainCamera.SetActive(false);
             _goodFamily.SetActive(true);
+            _badFamily.SetActive(false);
+
+            DOVirtual.DelayedCall(_delay, () =>
+            {
+                RootCanvas.Instance.WinPopup.Show();
+                Cursor.visible = true;
+            });
         }
-        
-        
     }
 }

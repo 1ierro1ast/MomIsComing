@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1230900323579213983}
   - component: {fileID: 1087718811003399091}
   - component: {fileID: 2999576212260361939}
+  - component: {fileID: 208355275771667182}
   m_Layer: 0
   m_Name: LevelController
   m_TagString: Untagged
@@ -50,6 +51,7 @@ MonoBehaviour:
     WaitingFriendsTime: 20
     WaitingMomTime: 30
   _partyStarter: {fileID: 0}
+  _momCutscene: {fileID: 0}
 --- !u!114 &2999576212260361939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,3 +65,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cutsceneLength: 2
+  _splineFollower: {fileID: 0}
+  _door: {fileID: 0}
+  _partyFX: {fileID: 0}
+--- !u!114 &208355275771667182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924346620394301686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5cb0a2012f30e4bb066988ddee1f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playableDirector: {fileID: 0}
+  _momEnterAngryTimeline: {fileID: 11400000, guid: d1eac35a53d0c2b4ea9e2afdcd495e24, type: 2}
+  _momEnterHappyTimeline: {fileID: 11400000, guid: a9b32e11821b1204fbbaae0c076665e3, type: 2}
+  _badFamily: {fileID: 0}
+  _goodFamily: {fileID: 0}
+  _mainCamera: {fileID: 0}
+  _finalCamera: {fileID: 0}
+  _screenFader: {fileID: 0}
+  _delay: 4

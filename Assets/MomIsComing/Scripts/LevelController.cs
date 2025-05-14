@@ -19,7 +19,7 @@ namespace MomIsComing.Scripts
 
             _levelStateMachine = new LevelStateMachine(_objectsKeeper, gameConfig, _levelConfig, _partyStarter, _momCutscene);
             
-            _levelStateMachine.Enter<FriendsWaitingState>();
+            _levelStateMachine.Enter<StartTutorialState>();
         }
 
         private void Update()

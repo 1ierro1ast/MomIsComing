@@ -2,6 +2,7 @@
 using MomIsComing.Scripts.Abstractions;
 using MomIsComing.Scripts.EasyDebugger.Runtime;
 using MomIsComing.Scripts.EasyStateMachine;
+using MomIsComing.Scripts.PlayerController;
 using MomIsComing.Scripts.Ui;
 using UnityEngine;
 
@@ -10,12 +11,13 @@ namespace MomIsComing.Scripts.LevelStates
     public class FriendsWaitingState : IState, ITimer
     {
         private readonly LevelStateMachine _stateMachine;
+        private readonly ObjectsKeeper _objectsKeeper;
         private readonly float _time;
-        private float _timer; 
+        private readonly string _label;
+        
+        private float _timer;
         private bool _isTimerStarted;
-        private string _label;
         private Action<float,float> _updatedCallback;
-        private ObjectsKeeper _objectsKeeper;
 
         public FriendsWaitingState(LevelStateMachine stateMachine, GameConfig gameConfig,
             float waitingFriendsTime, ObjectsKeeper objectsKeeper)
@@ -55,6 +57,8 @@ namespace MomIsComing.Scripts.LevelStates
             var timerPopup = RootCanvas.Instance.TimerPopup;
             timerPopup.Construct(this, _label);
             timerPopup.Show();
+            
+            FirstPersonController.Instance.UnlockControl();
         }
 
         private void NextState()

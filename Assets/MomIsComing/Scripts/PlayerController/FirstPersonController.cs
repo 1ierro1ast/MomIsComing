@@ -47,13 +47,12 @@ namespace MomIsComing.Scripts.PlayerController
             
             _controller = GetComponent<CharacterController>();
             _currentRunTime = _maxRunTime;
-        
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
 
             var gameConfig = Resources.Load<GameConfig>("GameConfig");
             _walkSpeed = gameConfig.PlayerWalkSpeed;
             _runSpeed = gameConfig.PlayerRunSpeed;
+            
+            LockControl();
         }
 
         public void LockRotation()

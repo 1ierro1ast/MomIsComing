@@ -14,7 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerWalkSpeed: 3
   _playerRunSpeed: 6
-  _waitingFriendsTimer: 20
-  _waitingMomTime: 30
   _waitingFriendsLabel: Friends are coming in {0}
-  _waitingMomLabel: Mom is coming in {0}
+  _waitingMomLabel: Clean up before Mom arrives {0}

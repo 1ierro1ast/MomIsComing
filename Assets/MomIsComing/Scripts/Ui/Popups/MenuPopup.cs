@@ -39,7 +39,17 @@ namespace MomIsComing.Scripts.Ui.Popups
             Debugger.Message("Play button clicked");
             Hide();
             var levelLoader = LevelLoader.Instance;
-            _sceneLoader.LoadScene(levelLoader.GetCurrentScene());
+            RootCanvas.Instance.LoadingScreen.SetCallback(() =>
+            {
+                _sceneLoader.LoadScene(levelLoader.GetCurrentScene(), onLoaded: OnLoaded);
+            });
+            RootCanvas.Instance.LoadingScreen.Show();
+            
+        }
+
+        private void OnLoaded(string obj)
+        {
+            RootCanvas.Instance.LoadingScreen.Hide();
         }
     }
 }

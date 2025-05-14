@@ -10,13 +10,14 @@ namespace MomIsComing.Scripts.LevelStates
     public class MakingOrderState : IState, ITimer
     {
         private readonly LevelStateMachine _stateMachine;
+        private readonly ObjectsKeeper _objectsKeeper;
         private readonly float _time;
+        private readonly string _label;
+        
         private float _timer;
         private bool _isTimerStarted;
-        private string _label;
 
         private Action<float,float> _updatedCallback;
-        private ObjectsKeeper _objectsKeeper;
 
         public MakingOrderState(LevelStateMachine stateMachine, GameConfig gameConfig, float waitingMomTime, ObjectsKeeper objectsKeeper)
         {

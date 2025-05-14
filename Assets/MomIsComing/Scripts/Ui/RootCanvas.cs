@@ -25,6 +25,8 @@ namespace MomIsComing.Scripts.Ui
         [SerializeField] private TimerPopup _timerPopup;
         [SerializeField] private WinPopup _winPopup;
         [SerializeField] private LosePopup _losePopup;
+        [SerializeField] private StartTutorPopup _startTutorPopup;
+        [SerializeField] private LoadingScreen _loadingScreen;
         
         public MenuPopup MenuPopup => _menuPopup;
 
@@ -33,6 +35,9 @@ namespace MomIsComing.Scripts.Ui
         public WinPopup WinPopup => _winPopup;
 
         public LosePopup LosePopup => _losePopup;
+
+        public StartTutorPopup StartTutorPopup => _startTutorPopup;
+        public LoadingScreen LoadingScreen => _loadingScreen;
 
         private void Awake()
         {

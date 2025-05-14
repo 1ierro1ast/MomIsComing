@@ -10,6 +10,7 @@ namespace MomIsComing.Scripts.Ui
             RootCanvas.Instance.MenuPopup.ShowInstantly();
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            RootCanvas.Instance.LoadingScreen.Hide();
         }
     }
 }

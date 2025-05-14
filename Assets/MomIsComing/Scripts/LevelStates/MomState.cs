@@ -1,14 +1,13 @@
 ﻿using MomIsComing.Scripts.EasyDebugger.Runtime;
 using MomIsComing.Scripts.EasyStateMachine;
-using MomIsComing.Scripts.Ui;
 
 namespace MomIsComing.Scripts.LevelStates
 {
     public class MomState : IState
     {
-        private LevelStateMachine _stateMachine;
-        private ObjectsKeeper _objectsKeeper;
-        private MomCutscene _momCutscene;
+        private readonly LevelStateMachine _stateMachine;
+        private readonly ObjectsKeeper _objectsKeeper;
+        private readonly MomCutscene _momCutscene;
 
 
         public MomState(LevelStateMachine stateMachine, ObjectsKeeper objectsKeeper, MomCutscene momCutscene)

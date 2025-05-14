@@ -6,11 +6,11 @@ namespace MomIsComing.Scripts.LevelStates
 {
     public class FriendsCutsceneState : IState
     {
-        private LevelStateMachine _stateMachine;
-        private ObjectsKeeper _objectsKeeper;
+        private readonly LevelStateMachine _stateMachine;
+        private readonly ObjectsKeeper _objectsKeeper;
+        private readonly PartyStarter _partyStarter;
         private float _timer;
         private bool _waitingCutscene;
-        private PartyStarter _partyStarter;
 
         public FriendsCutsceneState(LevelStateMachine stateMachine, ObjectsKeeper objectsKeeper,
             PartyStarter partyStarter)

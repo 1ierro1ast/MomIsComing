@@ -48,10 +48,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectsKeeper: {fileID: 0}
   _levelConfig:
-    WaitingFriendsTime: 20
-    WaitingMomTime: 30
-  _partyStarter: {fileID: 0}
-  _momCutscene: {fileID: 0}
+    WaitingFriendsTime: 40
+    WaitingMomTime: 60
+  _partyStarter: {fileID: 2999576212260361939}
+  _momCutscene: {fileID: 208355275771667182}
 --- !u!114 &2999576212260361939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f66f39031129e47a977e6abdb65bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cutsceneLength: 2
+  _cutsceneLength: 10
   _splineFollower: {fileID: 0}
   _door: {fileID: 0}
   _partyFX: {fileID: 0}

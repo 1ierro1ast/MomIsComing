@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MomIsComing/Scenes/LivingRoom.unity
     guid: de2aa721898ef3042ad6aebd488b8079
+  - enabled: 1
+    path: Assets/MomIsComing/Scenes/DiningRoom.unity
+    guid: dbb9aebbd138f9744a02681139ec6f5c
+  - enabled: 1
+    path: Assets/MomIsComing/Scenes/OfficeRoom.unity
+    guid: f369b48d7c31086459ee51c30d76fb83
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

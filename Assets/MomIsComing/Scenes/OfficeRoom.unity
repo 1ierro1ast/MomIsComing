@@ -14023,6 +14023,10 @@ PrefabInstance:
       propertyPath: _objectsKeeper
       value: 
       objectReference: {fileID: 1630496196}
+    - target: {fileID: 1087718811003399091, guid: a39e3d5117b291945a060d4a1239ab79, type: 3}
+      propertyPath: _levelConfig.WaitingMomTime
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 1230900323579213983, guid: a39e3d5117b291945a060d4a1239ab79, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

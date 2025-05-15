@@ -16,6 +16,10 @@ namespace MomIsComing.Scripts.PlayerController
         [SerializeField] private float _placementOffset = 0.00f;
         [SerializeField] private Transform _target;
         [SerializeField] private Rig _rig;
+        [Space] 
+        [SerializeField] private AudioClip _pickupObject;
+        [SerializeField] private AudioClip _placeObject;
+        [SerializeField] private AudioSource _audioSource;
         
         private bool _isInteractPressed;
         private bool _isRotatingObject;
@@ -116,6 +120,7 @@ namespace MomIsComing.Scripts.PlayerController
             _takenObject.transform.localPosition = Vector3.zero;
             _takenObject.DisableInteractable();
             _isInteractPressed = false;
+            _audioSource.PlayOneShot(_pickupObject);
         }
 
         private void TryPlaceOrRotateObject()
@@ -161,6 +166,8 @@ namespace MomIsComing.Scripts.PlayerController
             _takenObject = null;
             _isRotatingObject = false;
             _firstPersonController.UnlockRotation();
+            _audioSource.PlayOneShot(_placeObject);
+
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }

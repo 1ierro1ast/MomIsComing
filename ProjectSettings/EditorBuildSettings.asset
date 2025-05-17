@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/MomIsComing/Scenes/LoadScene.unity
+    guid: 414bd3b5bafda4348942578a0b1f7b21
+  - enabled: 1
     path: Assets/MomIsComing/Scenes/MenuScene.unity
     guid: d8bca3af033461a41b1ac96ecc75d1bd
   - enabled: 1

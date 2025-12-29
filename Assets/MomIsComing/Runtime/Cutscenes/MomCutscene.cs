@@ -1,8 +1,6 @@
-using System;
 using DG.Tweening;
 using MomIsComing.Scripts.Ui;
 using UnityEngine;
-using UnityEngine.Animations;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 using UnityEngine.UI;

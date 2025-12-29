@@ -23,8 +23,7 @@ namespace MomIsComing.Scripts
             
             return result;
         }
-
-
+        
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.K))

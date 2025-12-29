@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace MomIsComing.Scripts.Ui.Popups
 {
-    public class LosePopup : BasePopup, ICoroutineRunner
+    public class LosePopup : BasePopup
     {
         [SerializeField] private Button _nextButton;
 
@@ -16,8 +16,8 @@ namespace MomIsComing.Scripts.Ui.Popups
         private void OnNextButton()
         {
             Hide();
-            var sceneLoader = new SceneLoader(this);
-            sceneLoader.LoadScene("MenuScene");
+            var sceneLoader = new SceneLoader();
+            _ = sceneLoader.LoadScene("MenuScene");
         }
     }
 }

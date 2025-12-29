@@ -1,5 +1,4 @@
-﻿using System;
-using MomIsComing.Scripts.Ui;
+﻿using MomIsComing.Scripts.Ui;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 
@@ -36,15 +35,17 @@ namespace MomIsComing.Scripts.PlayerController
             HandleInput();
             HandleInteraction();
 
-            _rig.weight = Mathf.Lerp(_rig.weight, _lerpTarget, 10 * Time.deltaTime);
+            UpdateRigWeightSmoothly();
+            UpdateTargetPosition();
+            RotateTakenObject();
+            
+            //todo: maybe reactive property
+            UpdatePickupHintDisplay();
 
-            _target.position = _eyes.position + _eyes.forward;
+        }
 
-            if (_takenObject != null && !_isRotatingObject)
-            {
-                _takenObject.transform.rotation = transform.rotation * Quaternion.identity;
-            }
-
+        private void UpdatePickupHintDisplay()
+        {
             if (_availablePlaceableObject != null && !_availablePlaceableObject.IsLocked)
             {
                 Hints.Instance.ShowPickupHint();
@@ -53,7 +54,24 @@ namespace MomIsComing.Scripts.PlayerController
             {
                 Hints.Instance.HidePickupHint();
             }
+        }
 
+        private void UpdateTargetPosition()
+        {
+            _target.position = _eyes.position + _eyes.forward;
+        }
+
+        private void RotateTakenObject()
+        {
+            if (_takenObject != null && !_isRotatingObject)
+            {
+                _takenObject.transform.rotation = transform.rotation * Quaternion.identity;
+            }
+        }
+
+        private void UpdateRigWeightSmoothly()
+        {
+            _rig.weight = Mathf.Lerp(_rig.weight, _lerpTarget, 10 * Time.deltaTime);
         }
 
         private void UpdateInteractionRay()

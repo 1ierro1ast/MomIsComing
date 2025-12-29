@@ -1,22 +1,21 @@
-using System;
 using UnityEngine;
 
 namespace MomIsComing.Scripts
 {
     public class MotherSpankReactor : MonoBehaviour
     {
+        private static readonly int React = Animator.StringToHash("React");
         [SerializeField] private Animator _kidAnimator;
 
         public void Spank()
         {
             if (_kidAnimator == null)
             {
-                throw new System.NotImplementedException();
+                Debug.LogWarning("Kid animator is missing");
+                return;
             }
-            else
-            {
-                _kidAnimator.SetTrigger("React");
-            }
+            _kidAnimator?.SetTrigger(React);
+            
         }
     }
 }

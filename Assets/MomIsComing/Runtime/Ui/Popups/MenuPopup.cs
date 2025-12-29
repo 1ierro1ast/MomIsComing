@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace MomIsComing.Scripts.Ui.Popups
 {
-    public class MenuPopup : BasePopup, ICoroutineRunner
+    public class MenuPopup : BasePopup
     {
         [SerializeField] private Button _playButton;
         [SerializeField] private Button _exitButton;
@@ -13,7 +13,7 @@ namespace MomIsComing.Scripts.Ui.Popups
         protected override void OnInitialize()
         {
             base.OnInitialize();
-            _sceneLoader = new SceneLoader(this);
+            _sceneLoader = new SceneLoader();
         }
 
         protected override void OnShownCallback()
@@ -41,7 +41,7 @@ namespace MomIsComing.Scripts.Ui.Popups
             var levelLoader = LevelLoader.Instance;
             RootCanvas.Instance.LoadingScreen.SetCallback(() =>
             {
-                _sceneLoader.LoadScene(levelLoader.GetCurrentScene(), onLoaded: OnLoaded);
+                _ = _sceneLoader.LoadScene(levelLoader.GetCurrentScene(), onLoaded: OnLoaded);
             });
             RootCanvas.Instance.LoadingScreen.Show();
             

@@ -11,12 +11,11 @@ namespace MomIsComing.Scripts
         [SerializeField] private float _maxAngleDifference = 180;
 
         [SerializeField]
-        [Tooltip("Вес позиции в сравнении (от 0 до 1)")]
         [Range(0, 1)] private float _positionWeight = 0.5f;
 
         [Space]
         [SerializeField] 
-        [Tooltip("Объект эффекта, должен быть родительским")] private GameObject _fxGameObject;
+        private GameObject _fxGameObject;
 
         [SerializeField] private Material _rimMaterial;
         [SerializeField] private MeshRenderer _meshRenderer;

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace MomIsComing.Scripts.Ui.Popups
 {
-    public class WinPopup : BasePopup, ICoroutineRunner
+    public class WinPopup : BasePopup
     {
         [SerializeField] private Button _nextButton;
 
@@ -22,8 +22,8 @@ namespace MomIsComing.Scripts.Ui.Popups
             var currentLevel = new StoredInt("CurrentLevel", 0);
             currentLevel.Value++;
             
-            var sceneLoader = new SceneLoader(this);
-            sceneLoader.LoadScene("MenuScene");
+            var sceneLoader = new SceneLoader();
+            _ = sceneLoader.LoadScene("MenuScene");
         }
     }
 }
